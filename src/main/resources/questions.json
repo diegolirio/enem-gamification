@@ -1,0 +1,273 @@
+[
+  {
+    "number": 1,
+    "statement": "Which mountain is the highest in the world?",
+    "alternativeAnswers": [
+      {"description": "Mount Kilimanjaro", "letter": "A"},
+      {"description": "Mount Everest", "letter": "B"},
+      {"description": "Mount McKinley", "letter": "C"},
+      {"description": "Matterhorn", "letter": "D"}
+    ],
+    "area": "Geography"
+  },
+  {
+    "number": 2,
+    "description": "What is the powerhouse of the cell?",
+    "alternativeAnswers": [
+      {"description": "Nucleus", "letter": "A"},
+      {"description": "Ribosome", "letter": "B"},
+      {"description": "Mitochondria", "letter": "C"},
+      {"description": "Endoplasmic reticulum", "letter": "D"}
+    ]
+  },
+  {
+    "number": 3,
+    "description": "Who was the first President of the United States?",
+    "alternativeAnswers": [
+      {"description": "Thomas Jefferson", "letter": "A"},
+      {"description": "George Washington", "letter": "B"},
+      {"description": "Abraham Lincoln", "letter": "C"},
+      {"description": "John Adams", "letter": "D"}
+    ]
+  },
+  {
+    "number": 4,
+    "description": "What is the value of π (pi) to two decimal places?",
+    "alternativeAnswers": [
+      {"description": "3.14", "letter": "A"},
+      {"description": "3.16", "letter": "B"},
+      {"description": "3.18", "letter": "C"},
+      {"description": "3.12", "letter": "D"}
+    ]
+  },
+  {
+    "number": 5,
+    "description": "Who wrote 'Romeo and Juliet'?",
+    "alternativeAnswers": [
+      {"description": "William Wordsworth", "letter": "A"},
+      {"description": "Jane Austen", "letter": "B"},
+      {"description": "William Shakespeare", "letter": "C"},
+      {"description": "Charles Dickens", "letter": "D"}
+    ]
+  },
+  {
+    "number": 6,
+    "description": "What is the SI unit of force?",
+    "alternativeAnswers": [
+      {"description": "Watt", "letter": "A"},
+      {"description": "Newton", "letter": "B"},
+      {"description": "Joule", "letter": "C"},
+      {"description": "Pascal", "letter": "D"}
+    ]
+  },
+  {
+    "number": 7,
+    "description": "What is the chemical symbol for gold?",
+    "alternativeAnswers": [
+      {"description": "Au", "letter": "A"},
+      {"description": "Ag", "letter": "B"},
+      {"description": "Fe", "letter": "C"},
+      {"description": "Hg", "letter": "D"}
+    ]
+  },
+  {
+    "number": 8,
+    "description": "Who painted the Mona Lisa?",
+    "alternativeAnswers": [
+      {"description": "Vincent van Gogh", "letter": "A"},
+      {"description": "Leonardo da Vinci", "letter": "B"},
+      {"description": "Pablo Picasso", "letter": "C"},
+      {"description": "Michelangelo", "letter": "D"}
+    ]
+  },
+  {
+    "number": 9,
+    "description": "Which planet is known as the 'Red Planet'?",
+    "alternativeAnswers": [
+      {"description": "Venus", "letter": "A"},
+      {"description": "Mars", "letter": "B"},
+      {"description": "Jupiter", "letter": "C"},
+      {"description": "Saturn", "letter": "D"}
+    ]
+  },
+  {
+    "number": 10,
+    "description": "Who is the current Chancellor of Germany?",
+    "alternativeAnswers": [
+      {"description": "Angela Merkel", "letter": "A"},
+      {"description": "Emmanuel Macron", "letter": "B"},
+      {"description": "Boris Johnson", "letter": "C"},
+      {"description": "Justin Trudeau", "letter": "D"}
+    ]
+  },
+  {
+    "number": 11,
+    "description": "What is the largest organ in the human body?",
+    "alternativeAnswers": [
+      {"description": "Liver", "letter": "A"},
+      {"description": "Heart", "letter": "B"},
+      {"description": "Skin", "letter": "C"},
+      {"description": "Brain", "letter": "D"}
+    ]
+  },
+  {
+    "number": 12,
+    "description": "What is the currency of Japan?",
+    "alternativeAnswers": [
+      {"description": "Won", "letter": "A"},
+      {"description": "Yuan", "letter": "B"},
+      {"description": "Yen", "letter": "C"},
+      {"description": "Ringgit", "letter": "D"}
+    ]
+  },
+  {
+    "number": 13,
+    "description": "Who is considered the father of psychoanalysis?",
+    "alternativeAnswers": [
+      {"description": "B.F. Skinner", "letter": "A"},
+      {"description": "Sigmund Freud", "letter": "B"},
+      {"description": "Ivan Pavlov", "letter": "C"},
+      {"description": "Carl Jung", "letter": "D"}
+    ]
+  },
+  {
+    "number": 14,
+    "description": "Which company developed the first personal computer?",
+    "alternativeAnswers": [
+      {"description": "IBM", "letter": "A"},
+      {"description": "Microsoft", "letter": "B"},
+      {"description": "Apple", "letter": "C"},
+      {"description": "Dell", "letter": "D"}
+    ]
+  },
+  {
+    "number": 15,
+    "description": "What is the official language of Brazil?",
+    "alternativeAnswers": [
+      {"description": "Spanish", "letter": "A"},
+      {"description": "Portuguese", "letter": "B"},
+      {"description": "French", "letter": "C"},
+      {"description": "Italian", "letter": "D"}
+    ]
+  },
+  {
+    "number": 16,
+    "description": "What term is used to describe a sudden, widespread occurrence of a particular undesirable phenomenon?",
+    "alternativeAnswers": [
+      {"description": "Epidemic", "letter": "A"},
+      {"description": "Pandemic", "letter": "B"},
+      {"description": "Outbreak", "letter": "C"},
+      {"description": "Anomaly", "letter": "D"}
+    ]
+  },
+  {
+    "number": 17,
+    "description": "Who is known as the 'King of Pop'?",
+    "alternativeAnswers": [
+      {"description": "Elvis Presley", "letter": "A"},
+      {"description": "Michael Jackson", "letter": "B"},
+      {"description": "Madonna", "letter": "C"},
+      {"description": "Whitney Houston", "letter": "D"}
+    ]
+  },
+  {
+    "number": 18,
+    "description": "In which sport would you perform a slam dunk?",
+    "alternativeAnswers": [
+      {"description": "Soccer", "letter": "A"},
+      {"description": "Basketball", "letter": "B"},
+      {"description": "Tennis", "letter": "C"},
+      {"description": "Golf", "letter": "D"}
+    ]
+  },
+  {
+    "number": 19,
+    "description": "What type of rock is formed from cooled lava?",
+    "alternativeAnswers": [
+      {"description": "Granite", "letter": "A"},
+      {"description": "Basalt", "letter": "B"},
+      {"description": "Sandstone", "letter": "C"},
+      {"description": "Slate", "letter": "D"}
+    ]
+  },
+  {
+    "number": 20,
+    "description": "Who was the ancient Greek philosopher known for his teachings on ethics and morality?",
+    "alternativeAnswers": [
+      {"description": "Socrates", "letter": "A"},
+      {"description": "Aristotle", "letter": "B"},
+      {"description": "Plato", "letter": "C"},
+      {"description": "Pythagoras", "letter": "D"}
+    ]
+  },
+  {
+    "number": 21,
+    "description": "What gas do plants absorb during photosynthesis?",
+    "alternativeAnswers": [
+      {"description": "Oxygen", "letter": "A"},
+      {"description": "Carbon dioxide", "letter": "B"},
+      {"description": "Nitrogen", "letter": "C"},
+      {"description": "Hydrogen", "letter": "D"}
+    ]
+  },
+  {
+    "number": 22,
+    "description": "Who is the Greek god of the sea?",
+    "alternativeAnswers": [
+      {"description": "Zeus", "letter": "A"},
+      {"description": "Poseidon", "letter": "B"},
+      {"description": "Apollo", "letter": "C"},
+      {"description": "Hades", "letter": "D"}
+    ]
+  },
+  {
+    "number": 23,
+    "description": "In which play by Shakespeare does the character Hamlet appear?",
+    "alternativeAnswers": [
+      {"description": "Macbeth", "letter": "A"},
+      {"description": "Othello", "letter": "B"},
+      {"description": "Hamlet", "letter": "C"},
+      {"description": "King Lear", "letter": "D"}
+    ]
+  },
+  {
+    "number": 24,
+    "description": "What is the largest moon in our solar system?",
+    "alternativeAnswers": [
+      {"description": "Io", "letter": "A"},
+      {"description": "Europa", "letter": "B"},
+      {"description": "Ganymede", "letter": "C"},
+      {"description": "Titan", "letter": "D"}
+    ]
+  },
+  {
+    "number": 25,
+    "description": "Who was the queen of ancient Egypt known for her relationship with Mark Antony and Julius Caesar?",
+    "alternativeAnswers": [
+      {"description": "Cleopatra", "letter": "A"},
+      {"description": "Nefertiti", "letter": "B"},
+      {"description": "Hatshepsut", "letter": "C"},
+      {"description": "Tutankhamun", "letter": "D"}
+    ]
+  },
+  {
+    "number": 26,
+    "description": "What is the speed of light in a vacuum?",
+    "alternativeAnswers": [
+      {"description": "300,000 km/s", "letter": "A"},
+      {"description": "500,000 km/s", "letter": "B"},
+      {"description": "700,000 km/s", "letter": "C"},
+      {"description": "1,000,000 km/s", "letter": "D"}
+    ]
+  },
+  {
+    "number": 27,
+    "description": "What is the square root of 144?",
+    "alternativeAnswers": [
+      {"description": "10", "letter": "A"},
+      {"description": "12", "letter": "B"},
+      {"description": "14", "letter": "C"},
+      {"description": "16", "letter": "D"}
+    ]
+  }
+]

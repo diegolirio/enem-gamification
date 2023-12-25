@@ -1,0 +1,4 @@
+#spring:
+#  data:
+#    mongodb:
+#      uri: mongodb://root:en3m@localhost:27017/enemdb
