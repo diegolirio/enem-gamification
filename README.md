@@ -17,7 +17,7 @@
 7. Read this [article](https://levelup.gitconnected.com/spring-boot-testing-with-mongodb-using-testcontainers-796320067c62) 
 8. See the next API about gamification
 9. Read this [article](https://softwaremill.com/do-you-still-need-testcontainers-with-spring-boot-3-1/) 
-9. 
+9. Read artigo [Spring 3.2 and Java 21](https://www.unlogged.io/post/migrating-from-java-8-11-to-java-21-and-spring-boot-2-to-the-latest-spring-boot-3-2)
 10. I should consider to create modules to this application 
 11. Refactor all classes
 
