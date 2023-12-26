@@ -1,6 +1,7 @@
 [
   {
     "number": 1,
+    "area": "Geography",
     "statement": "Which mountain is the highest in the world?",
     "alternativeAnswers": [
       {"description": "Mount Kilimanjaro", "letter": "A"},
@@ -8,266 +9,594 @@
       {"description": "Mount McKinley", "letter": "C"},
       {"description": "Matterhorn", "letter": "D"}
     ],
-    "area": "Geography"
+    "correctAnswer": "B"
   },
   {
     "number": 2,
-    "description": "What is the powerhouse of the cell?",
+    "area": "Biology",
+    "statement": "What is the powerhouse of the cell?",
     "alternativeAnswers": [
       {"description": "Nucleus", "letter": "A"},
       {"description": "Ribosome", "letter": "B"},
       {"description": "Mitochondria", "letter": "C"},
       {"description": "Endoplasmic reticulum", "letter": "D"}
-    ]
+    ],
+    "correctAnswer": "C"
   },
   {
     "number": 3,
-    "description": "Who was the first President of the United States?",
+    "area": "History",
+    "statement": "Who was the first President of the United States?",
     "alternativeAnswers": [
       {"description": "Thomas Jefferson", "letter": "A"},
       {"description": "George Washington", "letter": "B"},
       {"description": "Abraham Lincoln", "letter": "C"},
       {"description": "John Adams", "letter": "D"}
-    ]
+    ],
+    "correctAnswer": "B"
   },
   {
     "number": 4,
-    "description": "What is the value of π (pi) to two decimal places?",
+    "area": "Mathematics",
+    "statement": "What is the value of π (pi) to two decimal places?",
     "alternativeAnswers": [
       {"description": "3.14", "letter": "A"},
       {"description": "3.16", "letter": "B"},
       {"description": "3.18", "letter": "C"},
       {"description": "3.12", "letter": "D"}
-    ]
+    ],
+    "correctAnswer": "A"
   },
   {
     "number": 5,
-    "description": "Who wrote 'Romeo and Juliet'?",
+    "area": "Literature",
+    "statement": "Who wrote 'Romeo and Juliet'?",
     "alternativeAnswers": [
       {"description": "William Wordsworth", "letter": "A"},
       {"description": "Jane Austen", "letter": "B"},
       {"description": "William Shakespeare", "letter": "C"},
       {"description": "Charles Dickens", "letter": "D"}
-    ]
+    ],
+    "correctAnswer": "C"
   },
   {
     "number": 6,
-    "description": "What is the SI unit of force?",
+    "area": "Physics",
+    "statement": "What is the SI unit of force?",
     "alternativeAnswers": [
       {"description": "Watt", "letter": "A"},
       {"description": "Newton", "letter": "B"},
       {"description": "Joule", "letter": "C"},
       {"description": "Pascal", "letter": "D"}
-    ]
+    ],
+    "correctAnswer": "B"
   },
   {
     "number": 7,
-    "description": "What is the chemical symbol for gold?",
+    "area": "Chemistry",
+    "statement": "What is the chemical symbol for gold?",
     "alternativeAnswers": [
       {"description": "Au", "letter": "A"},
       {"description": "Ag", "letter": "B"},
       {"description": "Fe", "letter": "C"},
       {"description": "Hg", "letter": "D"}
-    ]
+    ],
+    "correctAnswer": "A"
   },
   {
     "number": 8,
-    "description": "Who painted the Mona Lisa?",
+    "area": "Art and Culture",
+    "statement": "Who painted the Mona Lisa?",
     "alternativeAnswers": [
       {"description": "Vincent van Gogh", "letter": "A"},
       {"description": "Leonardo da Vinci", "letter": "B"},
       {"description": "Pablo Picasso", "letter": "C"},
       {"description": "Michelangelo", "letter": "D"}
-    ]
+    ],
+    "correctAnswer": "B"
   },
   {
     "number": 9,
-    "description": "Which planet is known as the 'Red Planet'?",
+    "area": "Astronomy",
+    "statement": "Which planet is known as the 'Red Planet'?",
     "alternativeAnswers": [
       {"description": "Venus", "letter": "A"},
       {"description": "Mars", "letter": "B"},
       {"description": "Jupiter", "letter": "C"},
       {"description": "Saturn", "letter": "D"}
-    ]
+    ],
+    "correctAnswer": "B"
   },
   {
     "number": 10,
-    "description": "Who is the current Chancellor of Germany?",
+    "area": "Politics",
+    "statement": "Who is the current Chancellor of Germany?",
     "alternativeAnswers": [
       {"description": "Angela Merkel", "letter": "A"},
       {"description": "Emmanuel Macron", "letter": "B"},
       {"description": "Boris Johnson", "letter": "C"},
       {"description": "Justin Trudeau", "letter": "D"}
-    ]
+    ],
+    "correctAnswer": "A"
   },
   {
     "number": 11,
-    "description": "What is the largest organ in the human body?",
+    "area": "Medicine",
+    "statement": "What is the largest organ in the human body?",
     "alternativeAnswers": [
-      {"description": "Liver", "letter": "A"},
-      {"description": "Heart", "letter": "B"},
-      {"description": "Skin", "letter": "C"},
-      {"description": "Brain", "letter": "D"}
-    ]
+      {"description": "Heart", "letter": "A"},
+      {"description": "Brain", "letter": "B"},
+      {"description": "Liver", "letter": "C"},
+      {"description": "Skin", "letter": "D"}
+    ],
+    "correctAnswer": "D"
   },
   {
     "number": 12,
-    "description": "What is the currency of Japan?",
+    "area": "Economics",
+    "statement": "What is the currency of Japan?",
     "alternativeAnswers": [
-      {"description": "Won", "letter": "A"},
-      {"description": "Yuan", "letter": "B"},
-      {"description": "Yen", "letter": "C"},
-      {"description": "Ringgit", "letter": "D"}
-    ]
+      {"description": "Yuan", "letter": "A"},
+      {"description": "Won", "letter": "B"},
+      {"description": "Ringgit", "letter": "C"},
+      {"description": "Yen", "letter": "D"}
+    ],
+    "correctAnswer": "D"
   },
   {
     "number": 13,
-    "description": "Who is considered the father of psychoanalysis?",
+    "area": "Psychology",
+    "statement": "Who is considered the father of psychoanalysis?",
     "alternativeAnswers": [
       {"description": "B.F. Skinner", "letter": "A"},
       {"description": "Sigmund Freud", "letter": "B"},
       {"description": "Ivan Pavlov", "letter": "C"},
       {"description": "Carl Jung", "letter": "D"}
-    ]
+    ],
+    "correctAnswer": "B"
   },
   {
     "number": 14,
-    "description": "Which company developed the first personal computer?",
+    "area": "Technology",
+    "statement": "Which company developed the first personal computer?",
     "alternativeAnswers": [
       {"description": "IBM", "letter": "A"},
-      {"description": "Microsoft", "letter": "B"},
-      {"description": "Apple", "letter": "C"},
-      {"description": "Dell", "letter": "D"}
-    ]
+      {"description": "Apple", "letter": "B"},
+      {"description": "Microsoft", "letter": "C"},
+      {"description": "Commodore", "letter": "D"}
+    ],
+    "correctAnswer": "B"
   },
   {
     "number": 15,
-    "description": "What is the official language of Brazil?",
+    "area": "Linguistics",
+    "statement": "What is the official language of Brazil?",
     "alternativeAnswers": [
       {"description": "Spanish", "letter": "A"},
       {"description": "Portuguese", "letter": "B"},
-      {"description": "French", "letter": "C"},
-      {"description": "Italian", "letter": "D"}
-    ]
+      {"description": "Italian", "letter": "C"},
+      {"description": "French", "letter": "D"}
+    ],
+    "correctAnswer": "B"
   },
   {
     "number": 16,
-    "description": "What term is used to describe a sudden, widespread occurrence of a particular undesirable phenomenon?",
+    "area": "Sociology",
+    "statement": "What term is used to describe a sudden, widespread occurrence of a particular undesirable phenomenon?",
     "alternativeAnswers": [
       {"description": "Epidemic", "letter": "A"},
       {"description": "Pandemic", "letter": "B"},
       {"description": "Outbreak", "letter": "C"},
-      {"description": "Anomaly", "letter": "D"}
-    ]
+      {"description": "Hysteria", "letter": "D"}
+    ],
+    "correctAnswer": "B"
   },
   {
     "number": 17,
-    "description": "Who is known as the 'King of Pop'?",
+    "area": "Music",
+    "statement": "Who is known as the 'King of Pop'?",
     "alternativeAnswers": [
       {"description": "Elvis Presley", "letter": "A"},
       {"description": "Michael Jackson", "letter": "B"},
-      {"description": "Madonna", "letter": "C"},
-      {"description": "Whitney Houston", "letter": "D"}
-    ]
+      {"description": "John Lennon", "letter": "C"},
+      {"description": "Bob Marley", "letter": "D"}
+    ],
+    "correctAnswer": "B"
   },
   {
     "number": 18,
-    "description": "In which sport would you perform a slam dunk?",
+    "area": "Sports",
+    "statement": "In which sport would you perform a slam dunk?",
     "alternativeAnswers": [
-      {"description": "Soccer", "letter": "A"},
+      {"description": "Tennis", "letter": "A"},
       {"description": "Basketball", "letter": "B"},
-      {"description": "Tennis", "letter": "C"},
+      {"description": "Soccer", "letter": "C"},
       {"description": "Golf", "letter": "D"}
-    ]
+    ],
+    "correctAnswer": "B"
   },
   {
     "number": 19,
-    "description": "What type of rock is formed from cooled lava?",
+    "area": "Geology",
+    "statement": "What type of rock is formed from cooled lava?",
     "alternativeAnswers": [
-      {"description": "Granite", "letter": "A"},
-      {"description": "Basalt", "letter": "B"},
-      {"description": "Sandstone", "letter": "C"},
-      {"description": "Slate", "letter": "D"}
-    ]
+      {"description": "Sedimentary", "letter": "A"},
+      {"description": "Metamorphic", "letter": "B"},
+      {"description": "Igneous", "letter": "C"},
+      {"description": "Granite", "letter": "D"}
+    ],
+    "correctAnswer": "C"
   },
   {
     "number": 20,
-    "description": "Who was the ancient Greek philosopher known for his teachings on ethics and morality?",
+    "area": "Philosophy",
+    "statement": "Who was the ancient Greek philosopher known for his teachings on ethics and morality?",
     "alternativeAnswers": [
       {"description": "Socrates", "letter": "A"},
-      {"description": "Aristotle", "letter": "B"},
-      {"description": "Plato", "letter": "C"},
-      {"description": "Pythagoras", "letter": "D"}
-    ]
+      {"description": "Plato", "letter": "B"},
+      {"description": "Aristotle", "letter": "C"},
+      {"description": "Epicurus", "letter": "D"}
+    ],
+    "correctAnswer": "C"
   },
   {
     "number": 21,
-    "description": "What gas do plants absorb during photosynthesis?",
+    "area": "Technology",
+    "statement": "What does the acronym 'HTML' stand for?",
     "alternativeAnswers": [
-      {"description": "Oxygen", "letter": "A"},
-      {"description": "Carbon dioxide", "letter": "B"},
-      {"description": "Nitrogen", "letter": "C"},
-      {"description": "Hydrogen", "letter": "D"}
-    ]
+      {"description": "HyperText Markup Language", "letter": "A"},
+      {"description": "High Tech Multimedia Language", "letter": "B"},
+      {"description": "Home Tool Management Language", "letter": "C"},
+      {"description": "Human-Technology Markup Language", "letter": "D"}
+    ],
+    "correctAnswer": "A"
   },
   {
     "number": 22,
-    "description": "Who is the Greek god of the sea?",
+    "area": "Physics",
+    "statement": "What is the speed of light in a vacuum?",
     "alternativeAnswers": [
-      {"description": "Zeus", "letter": "A"},
-      {"description": "Poseidon", "letter": "B"},
-      {"description": "Apollo", "letter": "C"},
-      {"description": "Hades", "letter": "D"}
-    ]
+      {"description": "300,000 km/s", "letter": "A"},
+      {"description": "150,000 km/s", "letter": "B"},
+      {"description": "500,000 km/s", "letter": "C"},
+      {"description": "1,000,000 km/s", "letter": "D"}
+    ],
+    "correctAnswer": "A"
   },
   {
     "number": 23,
-    "description": "In which play by Shakespeare does the character Hamlet appear?",
+    "area": "Literature",
+    "statement": "Who wrote the novel '1984'?",
     "alternativeAnswers": [
-      {"description": "Macbeth", "letter": "A"},
-      {"description": "Othello", "letter": "B"},
-      {"description": "Hamlet", "letter": "C"},
-      {"description": "King Lear", "letter": "D"}
-    ]
+      {"description": "George Orwell", "letter": "A"},
+      {"description": "Aldous Huxley", "letter": "B"},
+      {"description": "Ray Bradbury", "letter": "C"},
+      {"description": "J.K. Rowling", "letter": "D"}
+    ],
+    "correctAnswer": "A"
   },
   {
     "number": 24,
-    "description": "What is the largest moon in our solar system?",
+    "area": "Geography",
+    "statement": "Which river is the longest in the world?",
     "alternativeAnswers": [
-      {"description": "Io", "letter": "A"},
-      {"description": "Europa", "letter": "B"},
-      {"description": "Ganymede", "letter": "C"},
-      {"description": "Titan", "letter": "D"}
-    ]
+      {"description": "Amazon River", "letter": "A"},
+      {"description": "Nile River", "letter": "B"},
+      {"description": "Yangtze River", "letter": "C"},
+      {"description": "Mississippi River", "letter": "D"}
+    ],
+    "correctAnswer": "B"
   },
   {
     "number": 25,
-    "description": "Who was the queen of ancient Egypt known for her relationship with Mark Antony and Julius Caesar?",
+    "area": "History",
+    "statement": "During which war did the Battle of Gettysburg take place?",
     "alternativeAnswers": [
-      {"description": "Cleopatra", "letter": "A"},
-      {"description": "Nefertiti", "letter": "B"},
-      {"description": "Hatshepsut", "letter": "C"},
-      {"description": "Tutankhamun", "letter": "D"}
-    ]
+      {"description": "World War I", "letter": "A"},
+      {"description": "American Civil War", "letter": "B"},
+      {"description": "World War II", "letter": "C"},
+      {"description": "Vietnam War", "letter": "D"}
+    ],
+    "correctAnswer": "B"
   },
   {
     "number": 26,
-    "description": "What is the speed of light in a vacuum?",
+    "area": "Art and Culture",
+    "statement": "Who painted 'Starry Night'?",
     "alternativeAnswers": [
-      {"description": "300,000 km/s", "letter": "A"},
-      {"description": "500,000 km/s", "letter": "B"},
-      {"description": "700,000 km/s", "letter": "C"},
-      {"description": "1,000,000 km/s", "letter": "D"}
-    ]
+      {"description": "Vincent van Gogh", "letter": "A"},
+      {"description": "Pablo Picasso", "letter": "B"},
+      {"description": "Claude Monet", "letter": "C"},
+      {"description": "Leonardo da Vinci", "letter": "D"}
+    ],
+    "correctAnswer": "A"
   },
   {
     "number": 27,
-    "description": "What is the square root of 144?",
+    "area": "Economics",
+    "statement": "What is the Dow Jones Industrial Average (DJIA)?",
     "alternativeAnswers": [
-      {"description": "10", "letter": "A"},
-      {"description": "12", "letter": "B"},
-      {"description": "14", "letter": "C"},
-      {"description": "16", "letter": "D"}
-    ]
+      {"description": "A currency exchange rate", "letter": "A"},
+      {"description": "A stock market index", "letter": "B"},
+      {"description": "An economic indicator", "letter": "C"},
+      {"description": "A commodity price", "letter": "D"}
+    ],
+    "correctAnswer": "B"
+  },
+  {
+    "number": 28,
+    "area": "Music",
+    "statement": "Who is known as the 'Queen of Pop'?",
+    "alternativeAnswers": [
+      {"description": "Madonna", "letter": "A"},
+      {"description": "Beyoncé", "letter": "B"},
+      {"description": "Lady Gaga", "letter": "C"},
+      {"description": "Rihanna", "letter": "D"}
+    ],
+    "correctAnswer": "A"
+  },
+  {
+    "number": 29,
+    "area": "Politics",
+    "statement": "Who is the current Prime Minister of Canada?",
+    "alternativeAnswers": [
+      {"description": "Justin Trudeau", "letter": "A"},
+      {"description": "Stephen Harper", "letter": "B"},
+      {"description": "Jean Chrétien", "letter": "C"},
+      {"description": "Brian Mulroney", "letter": "D"}
+    ],
+    "correctAnswer": "A"
+  },
+  {
+    "number": 30,
+    "area": "Science",
+    "statement": "What is the chemical symbol for water?",
+    "alternativeAnswers": [
+      {"description": "O2", "letter": "A"},
+      {"description": "CO2", "letter": "B"},
+      {"description": "H2O", "letter": "C"},
+      {"description": "N2", "letter": "D"}
+    ],
+    "correctAnswer": "C"
+  },
+  {
+    "number": 31,
+    "area": "Geography",
+    "statement": "What is the capital city of Australia?",
+    "alternativeAnswers": [
+      {"description": "Sydney", "letter": "A"},
+      {"description": "Melbourne", "letter": "B"},
+      {"description": "Canberra", "letter": "C"},
+      {"description": "Perth", "letter": "D"}
+    ],
+    "correctAnswer": "C"
+  },
+  {
+    "number": 32,
+    "area": "Literature",
+    "statement": "Who wrote the play 'Macbeth'?",
+    "alternativeAnswers": [
+      {"description": "William Shakespeare", "letter": "A"},
+      {"description": "Jane Austen", "letter": "B"},
+      {"description": "Charles Dickens", "letter": "C"},
+      {"description": "Leo Tolstoy", "letter": "D"}
+    ],
+    "correctAnswer": "A"
+  },
+  {
+    "number": 33,
+    "area": "Physics",
+    "statement": "What is the law of gravity?",
+    "alternativeAnswers": [
+      {"description": "Newton's First Law", "letter": "A"},
+      {"description": "Newton's Second Law", "letter": "B"},
+      {"description": "Newton's Third Law", "letter": "C"},
+      {"description": "Universal Law of Gravitation", "letter": "D"}
+    ],
+    "correctAnswer": "D"
+  },
+  {
+    "number": 34,
+    "area": "History",
+    "statement": "Who was the first Emperor of China?",
+    "alternativeAnswers": [
+      {"description": "Mao Zedong", "letter": "A"},
+      {"description": "Qin Shi Huang", "letter": "B"},
+      {"description": "Sun Yat-sen", "letter": "C"},
+      {"description": "Emperor Wu", "letter": "D"}
+    ],
+    "correctAnswer": "B"
+  },
+  {
+    "number": 35,
+    "area": "Technology",
+    "statement": "What does 'HTTP' stand for in website addresses?",
+    "alternativeAnswers": [
+      {"description": "HyperText Transfer Protocol", "letter": "A"},
+      {"description": "High Tech Transfer Protocol", "letter": "B"},
+      {"description": "HyperText Typing Protocol", "letter": "C"},
+      {"description": "Highway Traffic Transfer Protocol", "letter": "D"}
+    ],
+    "correctAnswer": "A"
+  },
+  {
+    "number": 36,
+    "area": "Economics",
+    "statement": "What is inflation?",
+    "alternativeAnswers": [
+      {"description": "Decrease in prices", "letter": "A"},
+      {"description": "Increase in prices", "letter": "B"},
+      {"description": "Stable prices", "letter": "C"},
+      {"description": "Unemployment rate", "letter": "D"}
+    ],
+    "correctAnswer": "B"
+  },
+  {
+    "number": 37,
+    "area": "Music",
+    "statement": "Who composed the 'Moonlight Sonata'?",
+    "alternativeAnswers": [
+      {"description": "Wolfgang Amadeus Mozart", "letter": "A"},
+      {"description": "Ludwig van Beethoven", "letter": "B"},
+      {"description": "Johann Sebastian Bach", "letter": "C"},
+      {"description": "Pyotr Ilyich Tchaikovsky", "letter": "D"}
+    ],
+    "correctAnswer": "B"
+  },
+  {
+    "number": 38,
+    "area": "Biology",
+    "statement": "What is the function of red blood cells?",
+    "alternativeAnswers": [
+      {"description": "Carry oxygen", "letter": "A"},
+      {"description": "Digest food", "letter": "B"},
+      {"description": "Produce antibodies", "letter": "C"},
+      {"description": "Store energy", "letter": "D"}
+    ],
+    "correctAnswer": "A"
+  },
+  {
+    "number": 39,
+    "area": "Politics",
+    "statement": "What is the United Nations (UN) responsible for?",
+    "alternativeAnswers": [
+      {"description": "Global healthcare", "letter": "A"},
+      {"description": "International peace and security", "letter": "B"},
+      {"description": "Space exploration", "letter": "C"},
+      {"description": "Climate change policies", "letter": "D"}
+    ],
+    "correctAnswer": "B"
+  },
+  {
+    "number": 40,
+    "area": "Mathematics",
+    "statement": "What is the square of 9?",
+    "alternativeAnswers": [
+      {"description": "64", "letter": "A"},
+      {"description": "81", "letter": "B"},
+      {"description": "49", "letter": "C"},
+      {"description": "36", "letter": "D"}
+    ],
+    "correctAnswer": "B"
+  },
+  {
+    "number": 41,
+    "area": "Astronomy",
+    "statement": "Which planet is known as the 'Morning Star'?",
+    "alternativeAnswers": [
+      {"description": "Venus", "letter": "A"},
+      {"description": "Mars", "letter": "B"},
+      {"description": "Jupiter", "letter": "C"},
+      {"description": "Mercury", "letter": "D"}
+    ],
+    "correctAnswer": "A"
+  },
+  {
+    "number": 42,
+    "area": "History",
+    "statement": "Who was the first female Prime Minister of the United Kingdom?",
+    "alternativeAnswers": [
+      {"description": "Margaret Thatcher", "letter": "A"},
+      {"description": "Angela Merkel", "letter": "B"},
+      {"description": "Theresa May", "letter": "C"},
+      {"description": "Indira Gandhi", "letter": "D"}
+    ],
+    "correctAnswer": "A"
+  },
+  {
+    "number": 43,
+    "area": "Physics",
+    "statement": "What is the unit of electrical resistance?",
+    "alternativeAnswers": [
+      {"description": "Volt", "letter": "A"},
+      {"description": "Ampere", "letter": "B"},
+      {"description": "Ohm", "letter": "C"},
+      {"description": "Watt", "letter": "D"}
+    ],
+    "correctAnswer": "C"
+  },
+  {
+    "number": 44,
+    "area": "Literature",
+    "statement": "Who wrote the novel 'To Kill a Mockingbird'?",
+    "alternativeAnswers": [
+      {"description": "Ernest Hemingway", "letter": "A"},
+      {"description": "J.K. Rowling", "letter": "B"},
+      {"description": "Harper Lee", "letter": "C"},
+      {"description": "F. Scott Fitzgerald", "letter": "D"}
+    ],
+    "correctAnswer": "C"
+  },
+  {
+    "number": 45,
+    "area": "Geography",
+    "statement": "Which ocean is the largest?",
+    "alternativeAnswers": [
+      {"description": "Atlantic Ocean", "letter": "A"},
+      {"description": "Indian Ocean", "letter": "B"},
+      {"description": "Southern Ocean", "letter": "C"},
+      {"description": "Pacific Ocean", "letter": "D"}
+    ],
+    "correctAnswer": "D"
+  },
+  {
+    "number": 46,
+    "area": "Technology",
+    "statement": "What does the acronym 'AI' stand for in computer science?",
+    "alternativeAnswers": [
+      {"description": "Automated Internet", "letter": "A"},
+      {"description": "Artificial Intelligence", "letter": "B"},
+      {"description": "Advanced Interface", "letter": "C"},
+      {"description": "Automated Information", "letter": "D"}
+    ],
+    "correctAnswer": "B"
+  },
+  {
+    "number": 47,
+    "area": "Biology",
+    "statement": "Which gas do plants absorb during photosynthesis?",
+    "alternativeAnswers": [
+      {"description": "Carbon Dioxide (CO2)", "letter": "A"},
+      {"description": "Oxygen (O2)", "letter": "B"},
+      {"description": "Nitrogen (N2)", "letter": "C"},
+      {"description": "Methane (CH4)", "letter": "D"}
+    ],
+    "correctAnswer": "A"
+  },
+  {
+    "number": 48,
+    "area": "History",
+    "statement": "In which year did Christopher Columbus first reach the Americas?",
+    "alternativeAnswers": [
+      {"description": "1492", "letter": "A"},
+      {"description": "1607", "letter": "B"},
+      {"description": "1776", "letter": "C"},
+      {"description": "1804", "letter": "D"}
+    ],
+    "correctAnswer": "A"
+  },
+  {
+    "number": 49,
+    "area": "Sports",
+    "statement": "Which country hosted the first modern Olympic Games?",
+    "alternativeAnswers": [
+      {"description": "France", "letter": "A"},
+      {"description": "Greece", "letter": "B"},
+      {"description": "United Kingdom", "letter": "C"},
+      {"description": "USA", "letter": "D"}
+    ],
+    "correctAnswer": "B"
+  },
+  {
+    "number": 50,
+    "area": "Science",
+    "statement": "What is the chemical symbol for gold?",
+    "alternativeAnswers": [
+      {"description": "Au", "letter": "A"},
+      {"description": "Ag", "letter": "B"},
+      {"description": "Fe", "letter": "C"},
+      {"description": "Hg", "letter": "D"}
+    ],
+    "correctAnswer": "A"
   }
 ]
