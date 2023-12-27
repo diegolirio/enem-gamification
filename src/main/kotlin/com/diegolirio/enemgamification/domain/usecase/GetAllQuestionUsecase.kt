@@ -12,11 +12,10 @@ class GetAllQuestionUsecase(
         private val questionRepository: QuestionRepository
 ) {
 
-    fun get(pageNumber: Int, pageSize: Int): Page<QuestionEntity>  {
+    fun get(testId: String, pageNumber: Int, pageSize: Int): Page<QuestionEntity>  {
         return getSort("number", Sort.Direction.ASC.name).let {
-            questionRepository.findAll(PageRequest.of(pageNumber, pageSize, it))
+            questionRepository.findByTestId(testId, PageRequest.of(pageNumber, pageSize, it))
         }
-
     }
 
     private fun getSort(sortBy: String, sortDirection: String) =

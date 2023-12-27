@@ -2,6 +2,7 @@ package com.diegolirio.enemgamification.app.entrypoint
 
 import com.diegolirio.enemgamification.app.entrypoint.data.*
 import com.diegolirio.enemgamification.domain.entity.AnswerEntity
+import com.diegolirio.enemgamification.domain.entity.EnrollmentEntity
 import com.diegolirio.enemgamification.domain.usecase.exception.PageNumberAndPageSizeFormatException
 import com.diegolirio.enemgamification.domain.entity.QuestionEntity
 import com.diegolirio.enemgamification.domain.usecase.CreateQuestionUsecase
@@ -23,27 +24,31 @@ class QuestionRestController(
     @GetMapping
     fun getAllQuestions(
             @RequestParam("pageNumber") pageNumber: String = "0",
-            @RequestParam("pageSize") pageSize: String = "10"
+            @RequestParam("pageSize") pageSize: String = "10",
+            @RequestHeader("testId") testId: String
     ): PageResponse<QuestionResponse> {
         try {
             Pair(pageNumber.toInt(), pageSize.toInt())
         } catch (e: NumberFormatException) {
             throw PageNumberAndPageSizeFormatException("It is not a number")
         }.let {
-            return getAllQuestion.get(it.first, it.second).toResponse()
+            return getAllQuestion.get(testId, it.first, it.second).toResponse()
         }
     }
 
     @PostMapping("/answers")
     @ResponseStatus(HttpStatus.CREATED)
-    fun saveAnswers(@RequestBody answer: AnswerRequest): AnswerResponse {
-        return saveAnswerUsecase.save(answer)
+    fun saveAnswers(
+            @RequestBody answer: AnswerRequest,
+            @RequestHeader("enrollment") enrollment: String
+    ): AnswerResponse {
+        return saveAnswerUsecase.save(enrollment, answer)
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     fun createQuestion(@RequestBody questionRequest: QuestionRequest) {
-        createQuestionUsecase.exec(questionRequest.toEntity())
+        createQuestionUsecase.exec(questionRequest)
     }
 
     companion object {
