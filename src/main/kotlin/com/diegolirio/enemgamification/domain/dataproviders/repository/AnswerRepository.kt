@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository
 @Repository
 interface AnswerRepository : MongoRepository<AnswerEntity, String> {
 
-    fun countByQuestionId(questionId: String): Long
+    fun countByQuestionIdAndEnrollmentId(questionId: String, enrollmentId: String): Long
 
 }

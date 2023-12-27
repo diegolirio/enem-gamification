@@ -1,8 +1,8 @@
 package com.diegolirio.enemgamification.domain.usecase
 
 import com.diegolirio.enemgamification.domain.dataproviders.repository.AnswerRepository
+import com.diegolirio.enemgamification.domain.dataproviders.repository.EnrollmentRepository
 import com.diegolirio.enemgamification.domain.dataproviders.repository.QuestionRepository
-import com.diegolirio.enemgamification.domain.dataproviders.repository.ScoringLevelRepository
 import com.diegolirio.enemgamification.domain.entity.AnswerEntity
 import com.diegolirio.enemgamification.domain.entity.EnrollmentEntity
 import com.diegolirio.enemgamification.domain.usecase.exception.AlreadyAnsweredException
@@ -16,43 +16,47 @@ import org.springframework.transaction.annotation.Transactional
 class SaveAnswerUsecase(
         private val questionRepository: QuestionRepository,
         private val answerRepository: AnswerRepository,
-        private val scoringLevelRepository: ScoringLevelRepository
+        private val enrollmentRepository: EnrollmentRepository
 ) {
 
     @Transactional
-    fun save(answerRequest: AnswerRequest) : AnswerResponse {
-
-        // TODO
-        //   5. Create a Enrollment and I should pass the enrollment.id on header and validate if exists on Database
-        //   6. No sistema de Gamification devera ter uma Entidade que ira gravar a soma da pontuacao e classificando o nivel
-        //   7. Analisar criar Test/Matricula para rankear os candidatos
-        //   4. Criar endpoint Limpar Base
-        //   5. Criar endpoint Inserir Base confomrme o JSON
-
-        checkConstraints(answerRequest)
-
+    fun save(enrollmentId: String, answerRequest: AnswerRequest) : AnswerResponse {
+        checkConstraints(enrollmentId, answerRequest)
+        val enrollment = enrollmentRepository.findById(enrollmentId).get()
         val questionEntity = questionRepository.findById(answerRequest.questionId).get()
+
+        if(questionEntity.test!!.id != enrollment.test!!.id) {
+            throw RuntimeException("Enrollment and Question do not belong to the same Test")
+        }
+
         val scoring = if (questionEntity.correctAnswer == answerRequest.answer) 10 else -5
 
         return AnswerEntity(
                 question = questionEntity,
                 answer = answerRequest.answer,
                 scoring = scoring,
+                enrollment = enrollment,
         ).let {
             AnswerResponse(scoring = answerRepository.save(it).scoring)
         }.also {
-            // TODO 6
-            scoringLevelRepository.findAll()
-            val a = EnrollmentEntity()
+            enrollment.scoringLevel.scoringTotal += it.scoring
+            enrollment.scoringLevel.rating = when {
+                enrollment.scoringLevel.scoringTotal < 50 -> EnrollmentEntity.RatingEnum.NEWBIE
+                enrollment.scoringLevel.scoringTotal in 51..100 -> EnrollmentEntity.RatingEnum.KNOWLEDGEABLE
+                enrollment.scoringLevel.scoringTotal in 101..200 -> EnrollmentEntity.RatingEnum.EXPERT
+                enrollment.scoringLevel.scoringTotal > 200 -> EnrollmentEntity.RatingEnum.MASTER
+                else -> EnrollmentEntity.RatingEnum.NEWBIE
+            }
+            enrollmentRepository.save(enrollment)
         }
 
     }
 
-    private fun checkConstraints(answerRequest: AnswerRequest) {
+    private fun checkConstraints(enrollmentId: String, answerRequest: AnswerRequest) {
         if (answerRequest.answer !in 'A'..'D') {
             throw AnswerOutOfBoundsException()
         }
-        if(answerRepository.countByQuestionId(answerRequest.questionId) > 0L) {
+        if(answerRepository.countByQuestionIdAndEnrollmentId(answerRequest.questionId, enrollmentId) > 0L) {
             throw AlreadyAnsweredException("Question has already been answered")
         }
     }

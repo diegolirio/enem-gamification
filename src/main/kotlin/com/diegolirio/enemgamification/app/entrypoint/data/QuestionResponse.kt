@@ -1,14 +1,14 @@
 package com.diegolirio.enemgamification.app.entrypoint.data
 
 import com.diegolirio.enemgamification.domain.entity.QuestionEntity
-import org.bson.types.ObjectId
 
 data class QuestionResponse(
-        var id: ObjectId? = null,
+        var id: String? = null,
         var number: Int? = null,
         var statement: String? = null,
         var alternativeAnswers: List<AlternativeAnswer>? = null,
         var area: String? = null,
+        var testDescription: String? = null
 ) {
     data class AlternativeAnswer(
             var letter: Char? = null,
@@ -16,16 +16,17 @@ data class QuestionResponse(
     )
 }
 
-fun QuestionEntity.toResponse() : QuestionResponse =
+fun QuestionEntity.toResponse(): QuestionResponse =
         QuestionResponse(
                 id = this.id,
                 number = this.number,
                 statement = this.statement,
                 alternativeAnswers = this.alternativeAnswers?.map(QuestionEntity.AlternativeAnswer::toResponse),
-                area = this.area
+                area = this.area,
+                testDescription = this.test?.description
         )
 
-fun QuestionEntity.AlternativeAnswer.toResponse() : QuestionResponse.AlternativeAnswer =
+fun QuestionEntity.AlternativeAnswer.toResponse(): QuestionResponse.AlternativeAnswer =
         QuestionResponse.AlternativeAnswer(
                 letter = this.letter,
                 description = this.description

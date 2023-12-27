@@ -31,6 +31,8 @@ dependencies {
 	testImplementation("org.testcontainers:junit-jupiter")
 	testImplementation("org.testcontainers:kafka")
 	implementation("org.testcontainers:mongodb")
+	testImplementation("org.mockito.kotlin:mockito-kotlin:5.2.1")
+	testImplementation("io.mockk:mockk:1.13.8")
 }
 
 tasks.withType<KotlinCompile> {
