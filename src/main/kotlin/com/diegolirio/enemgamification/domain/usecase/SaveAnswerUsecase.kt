@@ -7,6 +7,7 @@ import com.diegolirio.enemgamification.domain.entity.AnswerEntity
 import com.diegolirio.enemgamification.domain.entity.EnrollmentEntity
 import com.diegolirio.enemgamification.domain.usecase.exception.AlreadyAnsweredException
 import com.diegolirio.enemgamification.domain.usecase.exception.AnswerOutOfBoundsException
+import com.diegolirio.enemgamification.domain.usecase.exception.EnrollmentDoesNotBelongException
 import com.diegolirio.enemgamification.domain.usecase.input.AnswerRequest
 import com.diegolirio.enemgamification.domain.usecase.output.AnswerResponse
 import org.springframework.stereotype.Service
@@ -26,7 +27,7 @@ class SaveAnswerUsecase(
         val questionEntity = questionRepository.findById(answerRequest.questionId).get()
 
         if(questionEntity.test!!.id != enrollment.test!!.id) {
-            throw RuntimeException("Enrollment and Question do not belong to the same Test")
+            throw EnrollmentDoesNotBelongException("Enrollment and Question do not belong to the same Test")
         }
 
         val scoring = if (questionEntity.correctAnswer == answerRequest.answer) 10 else -5
@@ -40,16 +41,17 @@ class SaveAnswerUsecase(
             AnswerResponse(scoring = answerRepository.save(it).scoring)
         }.also {
             enrollment.scoringLevel.scoringTotal += it.scoring
-            enrollment.scoringLevel.rating = when {
-                enrollment.scoringLevel.scoringTotal < 50 -> EnrollmentEntity.RatingEnum.NEWBIE
-                enrollment.scoringLevel.scoringTotal in 51..100 -> EnrollmentEntity.RatingEnum.KNOWLEDGEABLE
-                enrollment.scoringLevel.scoringTotal in 101..200 -> EnrollmentEntity.RatingEnum.EXPERT
-                enrollment.scoringLevel.scoringTotal > 200 -> EnrollmentEntity.RatingEnum.MASTER
-                else -> EnrollmentEntity.RatingEnum.NEWBIE
-            }
+            enrollment.scoringLevel.rating = ratingEnum(enrollment.scoringLevel.scoringTotal)
             enrollmentRepository.save(enrollment)
         }
 
+    }
+
+    private fun ratingEnum(scoringTotal: Int) = when {
+        scoringTotal < 50 -> EnrollmentEntity.RatingEnum.NEWBIE
+        scoringTotal in 51..100 -> EnrollmentEntity.RatingEnum.KNOWLEDGEABLE
+        scoringTotal in 101..200 -> EnrollmentEntity.RatingEnum.EXPERT
+        else -> EnrollmentEntity.RatingEnum.MASTER // enrollment.scoringLevel.scoringTotal > 200
     }
 
     private fun checkConstraints(enrollmentId: String, answerRequest: AnswerRequest) {

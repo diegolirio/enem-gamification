@@ -2,6 +2,7 @@ package com.diegolirio.enemgamification.app.entrypoint.handler
 
 import com.diegolirio.enemgamification.domain.usecase.exception.AlreadyAnsweredException
 import com.diegolirio.enemgamification.domain.usecase.exception.AnswerOutOfBoundsException
+import com.diegolirio.enemgamification.domain.usecase.exception.EnrollmentDoesNotBelongException
 import com.diegolirio.enemgamification.domain.usecase.exception.PageNumberAndPageSizeFormatException
 import org.springframework.http.HttpStatus
 import org.springframework.http.ProblemDetail
@@ -38,6 +39,15 @@ class GlobalExceptionHandler : ResponseEntityExceptionHandler() {
         val problemDetail = ProblemDetail.forStatusAndDetail(HttpStatus.UNPROCESSABLE_ENTITY, e.localizedMessage)
         problemDetail.title = AnswerOutOfBoundsException.PROBLEM_DETAIL_TITLE
         problemDetail.detail = AnswerOutOfBoundsException.PROBLEM_DETAIL_DETAIL
+        problemDetail.setProperty("Timestamp", Instant.now())
+        return problemDetail
+    }
+
+    @ExceptionHandler(EnrollmentDoesNotBelongException::class)
+    fun handleEnrollmentDoesNotBelongException(e: EnrollmentDoesNotBelongException) : ProblemDetail {
+        val problemDetail = ProblemDetail.forStatusAndDetail(HttpStatus.UNPROCESSABLE_ENTITY, e.localizedMessage)
+        problemDetail.title = EnrollmentDoesNotBelongException.PROBLEM_DETAIL_TITLE
+        problemDetail.detail = EnrollmentDoesNotBelongException.PROBLEM_DETAIL_DETAIL
         problemDetail.setProperty("Timestamp", Instant.now())
         return problemDetail
     }

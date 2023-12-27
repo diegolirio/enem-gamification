@@ -37,157 +37,30 @@ class QuestionRestControllerTests {
     @Autowired private lateinit var testRepository: TestRepository
     @Autowired private lateinit var enrollmentRepository: EnrollmentRepository
 
-//    @Test
-//    fun `test create new test and question, get all questions paged`() {
-//
-//        val testCreated = testRepository.save(
-//                TestEntity(
-//                        date = LocalDateTime.of(LocalDate.of(2022, 12, 1), LocalTime.MIDNIGHT),
-//                        description = "Enem Test 2022"
-//                )
-//        )
-//
-//        val request = QuestionRequest(
-//                number = 1,
-//                statement = "Qual as cores da bandeira do Brasil?",
-//                alternativeAnswers = listOf(QuestionRequest.AlternativeAnswer(
-//                        description = "Verde, Amarelo, Roxo e Branco",
-//                        letter = 'A'
-//                )),
-//                area = "Conhecimentos Gerais",
-//                testId = testCreated.id!!
-//        )
-//        postQuestion(request)
-//
-//        /**
-//        restTemplate.exchange(
-//        "",
-//        HttpMethod.GET,
-//        null,
-//        object : ParameterizedTypeReference<List<QuestionResponse>>() {}
-//        )
-//         */
-//
-//        /**
-//        val headers = HttpHeaders()
-//        headers.accept = listOf(MediaType.APPLICATION_JSON)
-//        val entity = HttpEntity<String>(headers)
-//        val responseEntity: ResponseEntity<List<QuestionResponse>> =
-//        restTemplate.exchange(QuestionRestController.PATH, HttpMethod.GET, entity, object : ParameterizedTypeReference<List<QuestionResponse>>() {})
-//         */
-//
-//        /**
-//        webClient
-//        .get()
-//        .uri(url)
-//        .retrieve()
-//        .bodyToMono(object : ParameterizedTypeReference<List<Question>>() {})
-//        .block() // blocking for simplicity; consider using subscribe() in a reactive context
-//         */
-//
-//        restTemplate.getForEntity(
-//                "${QuestionRestController.PATH}?pageNumber=0&pageSize=1", Any::class.java
-//        ).let {
-//            println(it.body)
-//            assertEquals(HttpStatus.OK, it.statusCode)
-//        }
-//
-//        restTemplate.exchange(
-//                "${QuestionRestController.PATH}?pageNumber=0&pageSize=10",
-//                HttpMethod.GET,
-//                null,
-//                //object : ParameterizedTypeReference<List<QuestionResponse>>() {}
-//                object : ParameterizedTypeReference<PageResponse<QuestionResponse>>() {}
-//        ).let {
-//            println(it.body)
-//            assertEquals(HttpStatus.OK, it.statusCode)
-//            assertTrue(it.body!!.content.isNotEmpty())
-//            assertFalse(it.body!!.last)
-//            assertTrue(it.body!!.first)
-//            assertFalse(it.body!!.empty)
-//            assertEquals(6, it.body!!.totalPages)
-//            assertEquals(51, it.body!!.totalElements)
-//            assertEquals(10, it.body!!.pageSize)
-//            assertEquals(0, it.body!!.pageNumber)
-//            assertEquals(it.body!!.content[0].statement, request.statement)
-//            assertEquals(it.body!!.content[0].number, request.number)
-//            assertTrue(it.body!!.content[0].alternativeAnswers!!.isNotEmpty())
-//            assertNotNull(it.body!!.content[0].testDescription)
-//        }
-//
-//        //        restTemplate.exchange(
-//        //                QuestionRestController.PATH,
-//        //                HttpMethod.GET,
-//        //                null,
-//        //                object : ParameterizedTypeReference<List<QuestionResponse>>() {}
-//        //        ).let {
-//        //            Assertions.assertEquals(HttpStatus.OK, it.statusCode)
-//        //            Assertions.assertEquals(it.body!!.description, "XPTO")
-//        //        }
-//
-//    }
     @Test
     fun `test get all questions paged`() {
+        val testEntity = testRepository.findByDescription("Enem 2024")[0]
+        val entity = HttpEntity<String>(headersGetQuestions(testEntity.id!!))
 
-    /**
-    restTemplate.exchange(
-    "",
-    HttpMethod.GET,
-    null,
-    object : ParameterizedTypeReference<List<QuestionResponse>>() {}
-    )
-     */
-
-    /**
-    val headers = HttpHeaders()
-    headers.accept = listOf(MediaType.APPLICATION_JSON)
-    val entity = HttpEntity<String>(headers)
-    val responseEntity: ResponseEntity<List<QuestionResponse>> =
-    restTemplate.exchange(QuestionRestController.PATH, HttpMethod.GET, entity, object : ParameterizedTypeReference<List<QuestionResponse>>() {})
-     */
-
-    /**
-    webClient
-    .get()
-    .uri(url)
-    .retrieve()
-    .bodyToMono(object : ParameterizedTypeReference<List<Question>>() {})
-    .block() // blocking for simplicity; consider using subscribe() in a reactive context
-     */
-
-    val testEntity = testRepository.findByDescription("Enem 2024")[0]
-    val entity = HttpEntity<String>(headersGetQuestions(testEntity.id!!))
-
-    restTemplate.exchange(
-            "${QuestionRestController.PATH}?pageNumber=0&pageSize=10",
-            HttpMethod.GET,
-            entity,
-            //object : ParameterizedTypeReference<List<QuestionResponse>>() {}
-            object : ParameterizedTypeReference<PageResponse<QuestionResponse>>() {}
-    ).let {
-        println(it.body)
-        assertEquals(HttpStatus.OK, it.statusCode)
-        assertTrue(it.body!!.content.isNotEmpty())
-        assertFalse(it.body!!.last)
-        assertTrue(it.body!!.first)
-        assertFalse(it.body!!.empty)
-        assertEquals(5, it.body!!.totalPages)
-        assertEquals(50, it.body!!.totalElements)
-        assertEquals(10, it.body!!.pageSize)
-        assertEquals(0, it.body!!.pageNumber)
+        restTemplate.exchange(
+                "${QuestionRestController.PATH}?pageNumber=0&pageSize=10",
+                HttpMethod.GET,
+                entity,
+                //object : ParameterizedTypeReference<List<QuestionResponse>>() {}
+                object : ParameterizedTypeReference<PageResponse<QuestionResponse>>() {}
+        ).let {
+            println(it.body)
+            assertEquals(HttpStatus.OK, it.statusCode)
+            assertTrue(it.body!!.content.isNotEmpty())
+            assertFalse(it.body!!.last)
+            assertTrue(it.body!!.first)
+            assertFalse(it.body!!.empty)
+            assertEquals(5, it.body!!.totalPages)
+            assertEquals(50, it.body!!.totalElements)
+            assertEquals(10, it.body!!.pageSize)
+            assertEquals(0, it.body!!.pageNumber)
+        }
     }
-
-    //        restTemplate.exchange(
-    //                QuestionRestController.PATH,
-    //                HttpMethod.GET,
-    //                null,
-    //                object : ParameterizedTypeReference<List<QuestionResponse>>() {}
-    //        ).let {
-    //            Assertions.assertEquals(HttpStatus.OK, it.statusCode)
-    //            Assertions.assertEquals(it.body!!.description, "XPTO")
-    //        }
-
-}
 
     @Test
     fun `test create a test and question, get all questions paged`() {
@@ -202,12 +75,14 @@ class QuestionRestControllerTests {
         val request = QuestionRequest(
                 number = 1,
                 statement = "Qual as cores da bandeira do Brasil?",
-                alternativeAnswers = listOf(QuestionRequest.AlternativeAnswer(
-                        description = "Verde, Amarelo, Roxo e Branco",
-                        letter = 'A'
-                )),
+                alternativeAnswers = listOf(
+                        QuestionRequest.AlternativeAnswer(
+                            description = "Verde, Amarelo, Azul e Branco",
+                            letter = 'A'
+                        )),
                 area = "Conhecimentos Gerais",
-                testId = testCreated.id!!
+                testId = testCreated.id!!,
+                correctAnswer = 'A'
         )
         postQuestion(request)
 
@@ -267,21 +142,6 @@ class QuestionRestControllerTests {
     }
 
     private fun postQuestion(requestBody: QuestionRequest) {
-
-        //        restTemplate.exchange(
-        //                QuestionRestController.PATH,
-        //                HttpMethod.POST,
-        //                null,
-        //                object : ParameterizedTypeReference<QuestionResponse>() {}
-        //        )
-
-        //        restTemplate.exchange(
-        //                url = QuestionRestController.PATH,
-        //                HttpMethod.POST,
-        //                HttpEntity(QuestionResponse),
-        //                QuestionResponse::class.java
-        //        )
-
         restTemplate.postForEntity(
                 QuestionRestController.PATH, HttpEntity(requestBody, headersPostAnswer("")),
                 Any::class.java
@@ -289,18 +149,6 @@ class QuestionRestControllerTests {
             assertEquals(HttpStatus.CREATED, it.statusCode)
         }
     }
-
-//    @Test
-//    fun testPostRequest() {
-//        val url = "/your-api-endpoint"
-//        val requestBody = YourRequestObject(/* provide request data here */)
-//
-//        val requestEntity: HttpEntity<YourRequestObject> = HttpEntity(requestBody)
-//        val responseEntity: ResponseEntity<YourResponseObject> =
-//                testRestTemplate.exchange(url, HttpMethod.POST, requestEntity, YourResponseObject::class.java)
-//
-//        assert(responseEntity.statusCode == HttpStatus.CREATED)
-//    }
 
     @Test
     fun `test should request a answer and return a scoring, httpStatus Created`() {

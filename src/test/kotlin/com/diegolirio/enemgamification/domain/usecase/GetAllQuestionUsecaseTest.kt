@@ -55,7 +55,9 @@ import com.diegolirio.enemgamification.domain.dataproviders.repository.QuestionR
 import com.diegolirio.enemgamification.domain.entity.QuestionEntity
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import org.mockito.Mockito.*
+import org.mockito.Mockito.mock
+import org.mockito.Mockito.`when`
+import org.mockito.Mockito.verify
 import org.springframework.data.domain.PageImpl
 import org.springframework.data.domain.PageRequest
 import org.springframework.data.domain.Sort
