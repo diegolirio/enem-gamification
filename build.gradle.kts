@@ -49,5 +49,5 @@ tasks.withType<Test> {
 
 
 tasks.bootBuildImage {
-	imageName = "diegolirio/enem-gamification"
+	imageName = "diegolirio/${project.name}:${project.version}"
 }
