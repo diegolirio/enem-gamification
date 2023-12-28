@@ -25,6 +25,7 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.springframework.kafka:spring-kafka")
+	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	implementation("org.springframework.boot:spring-boot-testcontainers")
 	testImplementation("org.springframework.kafka:spring-kafka-test")
@@ -44,4 +45,9 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<Test> {
 	useJUnitPlatform()
+}
+
+
+tasks.bootBuildImage {
+	imageName = "diegolirio/enem-gamification"
 }

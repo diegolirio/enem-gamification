@@ -11,21 +11,6 @@
 - Mockito para teste unitario
 - REST API para integração síncrona com a aplicação
 
-## Instruções para Executar a Aplicação
-
-Para executar a aplicação com um Banco MongoDB subindo em Docker, basta executar o comando abaixo:
-
-```shell
-cd local/
-docker-compose -f docker-compose-app.yml up
-```
-
-Para executar a aplicação através do código-fonte:
-```shell
-# obs: requisitos sao java-17 e docker
-./gradlew bootRun
-```
-
 ## Arquitetura do Código (ou Layer Architecture)
 
 ```
@@ -76,10 +61,40 @@ Nessa aplicação, usei o conceito TDD, iniciando pelos testes integrados, onde 
 
 A aplicação tem duas divisões, app e domain. App onde organizo e desenvolvo os testes integrados olhando para esse módulo. Domain onde executo os testes unitários, onde está nossa regra de negócio.
     
-#### Test Container
+### Test Container
 
 A saída para o Banco de Dados utilizei o Test-Container, dockers da nossa infra são executados e após os testes são derrubados. Nesse exemplo, temos o MongoDB. Antes, utilizei o MongoDB Embedded como teste para realizar esse tipo de teste. Com a infra se tornando cada vez mais importante para evitar problemas em produção, testes de containers são mais próximos de um cenário em produção. Se sua aplicação utiliza outras infraestruturas como Redis, Kafka, Oracle, HttpClient, Test-Container é uma boa solução para realizar testes integrados com a Infra.
 
 ### Testes Unitários
 
 Os Testes unitários foram desenvolvidos em Kotlin e Mockito. Basicamente, eles testam os `usecases`.
+    
+## Endpoints 
+
+Apos rodar a aplicacao para ver os endpoints acesse: http://localhost:8080/swagger-ui.html
+    
+Get Questions Paged
+```shell
+curl -X GET -H "testId: 658cd497baf2f726dc40eacc" http://localhost:8080/v1/questions
+```
+
+## Instruções para Executar a Aplicação
+
+Para executar a aplicação com um Banco MongoDB subindo em Docker, basta executar o comando abaixo:
+Dois containers ficarao UP, mongo e a aplicacao ([imagem da aplicacao esta no dockerhub e ira fazer o pull do mesmo](https://hub.docker.com/repository/docker/diegolirio/enem-gamification/general))
+```shell
+cd local/
+docker-compose -f docker-compose-app.yml up
+```
+
+Para executar a aplicação através do código-fonte:
+```shell
+# obs: requisitos sao java-17 e docker
+./gradlew bootRun
+```
+
+## Gerar Imagem Docker
+
+```shell
+sh build-and-generate-image.sh
+```

@@ -1,0 +1,26 @@
+version: '3'
+services:
+
+  enemgamification:
+    image: diegolirio/enem-gamification:latest
+    container_name: enemgamification
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      MONGODB_URI: mongodb://mongo:27017/enemdb
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongo
+    networks:
+      - kong
+
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+    networks:
+      - kong
+
+networks:
+  kong:
+    driver: bridge
