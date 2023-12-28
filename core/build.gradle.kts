@@ -7,9 +7,6 @@ plugins {
     kotlin("plugin.spring") version "1.9.21"
 }
 
-group = "com.diegolirio"
-version = "0.0.1-SNAPSHOT"
-
 java {
     sourceCompatibility = JavaVersion.VERSION_17
 }
@@ -45,7 +42,7 @@ tasks.named<org.springframework.boot.gradle.tasks.bundling.BootJar>("bootJar") {
 
 tasks.register<Jar>("coreJar") {
     from(sourceSets.main.get().output)
-    archiveFileName = "${project.parent!!.name}-${projectDir.name}-${project.version}.jar"
+    archiveFileName = "${project.parent!!.name}-${projectDir.name}-${project.parent!!.version}.jar"
 }
 
 tasks.named("build") {

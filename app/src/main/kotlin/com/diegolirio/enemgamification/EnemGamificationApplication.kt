@@ -33,7 +33,7 @@ class TestContainersConfigurationApplication {
     @Bean
     @ServiceConnection
     fun mongoDbContainer(): MongoDBContainer {
-        return MongoDBContainer(DockerImageName.parse("mongo:latest"))
+        return MongoDBContainer(DockerImageName.parse("mongo:4.4.26"))
     }
 }
 

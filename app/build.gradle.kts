@@ -7,8 +7,6 @@ plugins {
     kotlin("plugin.spring") version "1.9.21"
 }
 
-group = "com.diegolirio"
-version = "0.0.1-SNAPSHOT"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_17
@@ -47,5 +45,5 @@ tasks.withType<Test> {
 
 
 tasks.bootBuildImage {
-    imageName = "diegolirio/${project.parent!!.name}-${project.name}:${project.version}"
+    imageName = "diegolirio/${project.parent!!.name}-${project.name}:${project.parent!!.version}"
 }

@@ -104,7 +104,7 @@ Para executar a aplicação através do modulo app (rest):
 ./gradlew :app:bootRun
 ```
 
-Gerar Imagem
+Gerar Nova Imagem (Docker)
 ```shell
-sh build-and-generate-image.sh
+sh ./build-and-generate-image.sh
 ```

@@ -13,16 +13,16 @@ import org.testcontainers.utility.DockerImageName
 @TestConfiguration(proxyBeanMethods = false)
 class TestEnemGamificationApplication {
 
-	@Bean
-	@ServiceConnection
-	fun kafkaContainer(): KafkaContainer {
-		return KafkaContainer(DockerImageName.parse("confluentinc/cp-kafka:latest"))
-	}
+//	@Bean
+//	@ServiceConnection
+//	fun kafkaContainer(): KafkaContainer {
+//		return KafkaContainer(DockerImageName.parse("confluentinc/cp-kafka:latest"))
+//	}
 
 	@Bean
 	@ServiceConnection
 	fun mongoDbContainer(): MongoDBContainer {
-		return MongoDBContainer(DockerImageName.parse("mongo:latest"))
+		return MongoDBContainer(DockerImageName.parse("mongo:4.4.26"))
 	}
 
 }
