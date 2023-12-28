@@ -1,1 +1,1 @@
-./gradlew bootBuildImage
+./gradlew :app:bootBuildImage

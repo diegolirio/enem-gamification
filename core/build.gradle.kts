@@ -45,7 +45,7 @@ tasks.named<org.springframework.boot.gradle.tasks.bundling.BootJar>("bootJar") {
 
 tasks.register<Jar>("coreJar") {
     from(sourceSets.main.get().output)
-    archiveFileName = "emem-gamification-core.jar"
+    archiveFileName = "${project.parent!!.name}-${projectDir.name}-${project.version}.jar"
 }
 
 tasks.named("build") {

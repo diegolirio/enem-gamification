@@ -47,5 +47,5 @@ tasks.withType<Test> {
 
 
 tasks.bootBuildImage {
-    imageName = "diegolirio/${project.name}:${project.version}"
+    imageName = "diegolirio/${project.parent!!.name}-${project.name}:${project.version}"
 }
