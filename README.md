@@ -51,7 +51,7 @@ visando performance ou evitando gargalos.
   ficar tambem em dataproviders
 - `Entity` é onde estarão nossas classes que representam uma Entidade ou Documento no Banco de Dados.
     
-Aqui tem outro exemplo no meu Github onde estudei em considerei usar um [Mix de Hexagonal + Clean Arch](SaveAnswerUsecase)
+Aqui tem outro exemplo no meu Github onde estudei em considerei usar um [Mix de Hexagonal + Clean Arch](https://github.com/diegolirio/kotlin-spring-boot/tree/master/customer-dynamodb-redis-kafka-pix#arquitetura-de-codigo)
 
 ## Pirâmide de Testes
 
