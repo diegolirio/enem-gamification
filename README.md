@@ -46,12 +46,10 @@ domain conheça a infraestrutura, já que o maior ofensor de uma aplicação é 
 infraestrutura. A infraestrutura deve fazer parte da regra de negócio, 
 visando performance ou evitando gargalos.
 - `Usecase` são nossas classes com a regra de negócio de fato, seguindo o princípio da responsabilidade única.
-- `DataProvider`  é a saída para nossa infraestrutura, como conexão ou operação com o MongoDB. Se nossa aplicação conter outras saídas como infraestrutura como um HTTP Client ou um producer do Kafka, eles devem ficar também em dataproviders. 
-  conter outras saidas como infraestrutura como um HTTP Client ou um producer do Kafka, eles devem
-  ficar tambem em dataproviders
+- `DataProvider`  é a saída para nossa infraestrutura, como conexão ou operaçoes com o MongoDB. Se nossa aplicação conter outras saídas como infraestrutura como um HTTP Client ou um producer do Kafka, eles devem ficar também em dataproviders. 
 - `Entity` é onde estarão nossas classes que representam uma Entidade ou Documento no Banco de Dados.
     
-Aqui tem outro exemplo no meu Github onde estudei em considerei usar um [Mix de Hexagonal + Clean Arch](SaveAnswerUsecase)
+Aqui tem outro exemplo no meu Github onde estudei em considerei usar um [Mix de Hexagonal + Clean Arch](https://github.com/diegolirio/kotlin-spring-boot/tree/master/customer-dynamodb-redis-kafka-pix#arquitetura-de-codigo)
 
 ## Pirâmide de Testes
 
