@@ -21,7 +21,7 @@
                                   |--- QuestionRestController.kt
                             |--- handler
                                   |--- GlobalExceptionHandler.kt
-           |--- domain
+           |--- core
                    |--- dataproviders
                              |--- repository
                                       |--- QuestionRepository.kt
@@ -33,16 +33,16 @@
 ```   
 
 
-Inicialmente, a aplicação é dividida em dois módulos: `app` e `domain`.
+Inicialmente, a aplicação é dividida em dois módulos: `app` e `core`.
 - `App` possui tudo o que teremos de tecnologia, frameworks e entrada de dados 
 da infraestrutura para nossa aplicação, como expor rotas HTTP para entrada de dados REST API.   
-- `Domain` é o core da nossa aplicação, onde estará a regra de negócio. 
+- `Core` é o core da nossa aplicação, onde estará a regra de negócio. 
 Inicialmente, comecei a criar a aplicação sem conhecer as tecnologias, 
 frameworks ou infraestrutura utilizados, como MongoDB ou Spring, seguindo o 
 conceito do livro `Clean Architecture` escrito pelo Uncle Bob. No entanto, 
 optei por não seguir a clean-arch "by-the-book" e sim colocar em prática um 
 conceito mais prático que facilita a leitura do código. O principal é que o 
-domain conheça a infraestrutura, já que o maior ofensor de uma aplicação é a 
+`core/domain` conheça a infraestrutura, já que o maior ofensor de uma aplicação é a 
 infraestrutura. A infraestrutura deve fazer parte da regra de negócio, 
 visando performance ou evitando gargalos.
 - `Usecase` são nossas classes com a regra de negócio de fato, seguindo o princípio da responsabilidade única.
@@ -57,7 +57,7 @@ Um dos pontos mais importantes de desenvolver uma aplicação é a forma como vo
 
 Nessa aplicação, usei o conceito TDD, iniciando pelos testes integrados, onde eu desenvolvo um Endpoint começando pelos testes. Como HttpClient para realizar os testes, usei o RestTemplate, passando por todas as camadas da aplicação, inclusive a saída para o Banco de Dados. 
 
-A aplicação tem duas divisões, app e domain. App onde organizo e desenvolvo os testes integrados olhando para esse módulo. Domain onde executo os testes unitários, onde está nossa regra de negócio.
+A aplicação tem duas divisões, app e core. App onde organizo e desenvolvo os testes integrados olhando para esse módulo. Core onde executo os testes unitários, onde está nossa regra de negócio.
     
 ### Test Container
 
@@ -91,8 +91,20 @@ Para executar a aplicação através do código-fonte:
 ./gradlew bootRun
 ```
 
-## Gerar Imagem Docker
+## Build and Generate Image
 
+Compilar modulos separados
+```shell
+./gradlew :app:bootJar
+./gradlew :core:jar
+```
+
+Para executar a aplicação através do modulo app (rest):
+```shell
+./gradlew :app:bootRun
+```
+
+Gerar Imagem
 ```shell
 sh build-and-generate-image.sh
 ```
